@@ -37,7 +37,7 @@ export class ProductoService {
       .exec();
     const productosConUrl = productos.map((producto) => ({
       nombre: producto.nombre,
-      url: `http://localhost:3100/api/v2/producto/${producto._id}`, // Asumiendo que `_id` es el campo de identificación único de MongoDB
+      url: `https://api-producto-nestjs.onrender.com/api/v2/producto/${producto._id}`, // Asumiendo que `_id` es el campo de identificación único de MongoDB
     }));
     return productosConUrl;
   }
